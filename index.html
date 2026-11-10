@@ -3170,7 +3170,7 @@ function renderMtfBt(){
 
 /* ---------- Realtime: WebSocket Binance cho cả 4 khung (dự phòng: hỏi giá mỗi 4 giây) ---------- */
 const RT={hb:null,mk:'coin',ws:null,sym:null,ok:false,lastMsg:0,retry:0,timer:null,poll:null,dirty:false,provAt:0,prov:false,hostIdx:0,rs:{}};
-const WSHOSTS=['wss://data-stream.binance.vision','wss://stream.binance.com:9443','wss://stream.binance.com'];
+const WSHPSTS=['wss://fstream.binance.com'];
 function liveOf(E){const o=S.live[E.sym+'|'+E.tf];return o&&o.t>E.C[E.C.length-1].t?o:null;}
 function toast(msg,cls){
   const d=document.createElement('div');d.className='toast '+(cls==='buy'||cls==='sell'?cls:'');d.textContent=msg;
